@@ -1,23 +1,19 @@
-Roadmap
+# Project Roadmap
 
-v1.0.0
+This is the project roadmap, which outlines the future features and refactoring planned for the project.
 
- Implement basic CRUD endpoints for managing patients
- Add validation for all patient attributes
- Add unit tests for all endpoints and validation
- Add documentation for running and testing the API
- Add LICENSE.md file
+## Future Features
 
-v1.1.0
- Implement pagination for list endpoints
- Add support for updating and deleting multiple patients at once
- Add support for filtering patients by various criteria
+- Add `Update`, `Read` and `Delete` operations
+- Implement patient search functionality to search by patient name, NRIC or sample unique ID
+- Include validation rules for NRIC (there is already an existing checksum algorithm online)
+- Add pagination to patient list endpoint
+- Implement API rate limiting to prevent abuse
 
-v1.2.0
- Implement rate limiting to prevent abuse
- Add support for user authentication and authorization
- Add support for uploading patient profile images
- 
-v1.3.0
- Refactor patient validation to use a separate class
- Add integration tests for all endpoints
+## Refactoring
+
+- Move validation rules to a separate Request class
+- Improve validation rules (e.g. Add HashMap of Country Codes to refer to for Nationality instead of writing generic rules)
+- Implement unit and integration tests for all API endpoints
+- Consider using a NoSQL database like MongoDB for storing test results data if performance becomes an issue
+
