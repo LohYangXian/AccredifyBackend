@@ -23,7 +23,6 @@ class PatientController extends Controller
             $patientData['effectiveDateTime'] = str_replace(['T','Z'], " ",$patientData['effectiveDateTime']);
             $patient = new Patient($patientData);
             if (!$patient -> isValid()) {
-                print_r($patientData['collectedDateTime']);
                 return response(['error' => 'Invalid patient record'], 422);
             } 
             $patients[] = Patient::create($patientData);

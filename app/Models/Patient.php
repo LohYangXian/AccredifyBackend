@@ -42,6 +42,9 @@ class Patient extends Model
             'collectedDateTime' => 'required|date_format:Y-m-d H:i:s ',
             'effectiveDateTime' => 'required|date_format:Y-m-d H:i:s ',
         ]);
+        if ($validator -> fails()) {
+            print_r($validator -> errors());
+        }
         return !$validator->fails();
     }
 }
