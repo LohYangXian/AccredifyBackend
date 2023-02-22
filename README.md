@@ -1,4 +1,5 @@
-Patient Management API
+*Patient Management API*
+
 A RESTful API for managing patient data.
 
 Installation
